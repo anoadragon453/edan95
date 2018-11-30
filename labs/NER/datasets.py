@@ -18,11 +18,10 @@ def load_conll2009_pos():
 
 BASE_DIR = '/Users/pierre/Projets/Corpora/CoNLL2003/'
 
-
-def load_conll2003_en():
-    train_file = BASE_DIR + 'NER-data/eng.train'
-    dev_file = BASE_DIR + 'NER-data/eng.valid'
-    test_file = BASE_DIR + 'NER-data/eng.test'
+def load_conll2003_en(base_dir=BASE_DIR):
+    train_file = base_dir + 'NER-data/eng.train'
+    dev_file = base_dir + 'NER-data/eng.valid'
+    test_file = base_dir + 'NER-data/eng.test'
     column_names = ['form', 'ppos', 'pchunk', 'ner']
     train_sentences = open(train_file).read().strip()
     dev_sentences = open(dev_file).read().strip()
